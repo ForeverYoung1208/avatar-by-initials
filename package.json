@@ -1,0 +1,59 @@
+{
+  "name": "avatar-by-initials",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Ihor S",
+  "main": "dist/index.js",
+  "module": "dist/avatar-by-initials.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "analyze": "size-limit --why",
+    "build": "dts build",
+    "lint": "dts lint",
+    "prepare": "dts build",
+    "size": "size-limit",
+    "start": "dts watch",
+    "test": "dts test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "dts lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "peerDependencies": {},
+  "engines": {
+    "node": ">=12"
+  },
+  "size-limit": [
+    {
+      "path": "dist/avatar-by-initials.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/avatar-by-initials.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.1.6",
+    "@tsconfig/recommended": "^1.0.7",
+    "dts-cli": "^2.0.5",
+    "husky": "^9.1.6",
+    "size-limit": "^11.1.6",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.3"
+  }
+}
