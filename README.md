@@ -1,6 +1,7 @@
 # What is it
 
-Small utility to make avatar image from given name and surname
+Small utility to make avatar png image from given name and surname.
+Tiny. No deps.
 
 ## How to use
 ### install
@@ -40,4 +41,18 @@ import initialsAvatarGen from 'avatar-by-initials';
     nameAndSurname: `John Doe`,
     size: 200,
   })?.toBlob();
+```
+
+### shape of the params object: 
+```
+{
+  nameAndSurname: string;
+  circleColor: string;
+  fontColor: string;
+  fontName: string;
+  fontSize: number;
+  fileName?: string;  // default 'default${timestamp}.png'
+  isBold?: boolean;   // default true;
+  size?: number;      // default 200;
+};
 ```

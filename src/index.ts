@@ -56,7 +56,7 @@ const initialsAvatarGen = ({
     ctx.fillStyle = fontColor || '#FFFFFF';
 
     const [first = '', last = ''] = nameAndSurname.split(' ');
-    const text = `${first[0] || 'S'}${last[0] || ''}`.toUpperCase();
+    const text = `${first[0] || ''}${last[0] || ''}`.toUpperCase();
 
     const textMetrics = ctx.measureText(text);
     const textWidth = textMetrics.width;
